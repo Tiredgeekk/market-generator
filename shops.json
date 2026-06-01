@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Moonpetal Floristry",
+    "owner": "Elowen Moss",
+    "type": "Florist",
+    "rarity": "Common",
+    "quirk": "Talks to every flower individually.",
+    "sells": ["Glowblooms", "Moon Roses", "Potion herbs"]
+  },
+  {
+    "name": "Brass & Bone Curiosities",
+    "owner": "Tink Geargrind",
+    "type": "Curio Shop",
+    "rarity": "Common",
+    "quirk": "Every shelf is trapped.",
+    "sells": ["Trinkets", "Odd relics", "Monster teeth"]
+  },
+  {
+    "name": "The Crooked Cauldron",
+    "owner": "Mirella Vex",
+    "type": "Potion Shop",
+    "rarity": "Common",
+    "quirk": "Serves samples in teacups.",
+    "sells": ["Potions", "Tonics", "Ingredients"]
+  },
+  {
+    "name": "Ironroot Forge",
+    "owner": "Borik Ironroot",
+    "type": "Blacksmith",
+    "rarity": "Common",
+    "quirk": "Refuses to make matching weapons.",
+    "sells": ["Weapons", "Armor", "Tools"]
+  },
+  {
+    "name": "Feather & Ink",
+    "owner": "Quill",
+    "type": "Bookstore",
+    "rarity": "Common",
+    "quirk": "Mimics customers' voices.",
+    "sells": ["Books", "Maps", "Journals"]
+  },
+  {
+    "name": "The Lucky Kobold",
+    "owner": "Skrit",
+    "type": "General Store",
+    "rarity": "Common",
+    "quirk": "Every purchase includes a free treasure.",
+    "sells": ["Adventuring gear"]
+  },
+  {
+    "name": "Honeycomb Bakery",
+    "owner": "Auntie Bea",
+    "type": "Bakery",
+    "rarity": "Common",
+    "quirk": "Knows everyone's favorite pastry.",
+    "sells": ["Bread", "Pies", "Cakes"]
+  },
+  {
+    "name": "Silver String Music",
+    "owner": "Lyra Dawnsong",
+    "type": "Music Shop",
+    "rarity": "Uncommon",
+    "quirk": "Plays every instrument flawlessly.",
+    "sells": ["Instruments", "Sheet music"]
+  },
+  {
+    "name": "The Wandering Teapot",
+    "owner": "Madam Willow",
+    "type": "Tea Shop",
+    "rarity": "Common",
+    "quirk": "Predicts weather with tea leaves.",
+    "sells": ["Magical teas"]
+  },
+  {
+    "name": "Starfall Jewels",
+    "owner": "Opal Starfall",
+    "type": "Jeweler",
+    "rarity": "Common",
+    "quirk": "Rates gems like children.",
+    "sells": ["Jewelry", "Gemstones"]
+  },
+  {
+    "name": "Dragon's Hoard Pawnshop",
+    "owner": "Grux",
+    "type": "Pawn Shop",
+    "rarity": "Uncommon",
+    "quirk": "Believes every item is legendary.",
+    "sells": ["Used equipment"]
+  },
+  {
+    "name": "The Sleepy Owl",
+    "owner": "Professor Hoot",
+    "type": "Scroll Merchant",
+    "rarity": "Uncommon",
+    "quirk": "Falls asleep mid-conversation.",
+    "sells": ["Scrolls", "Magical notes"]
+  },
+  {
+    "name": "Moss & Mushroom",
+    "owner": "Fern Underbough",
+    "type": "Apothecary",
+    "rarity": "Common",
+    "quirk": "Has mushrooms growing from the ceiling.",
+    "sells": ["Herbal remedies"]
+  },
+  {
+    "name": "The Copper Compass",
+    "owner": "Jax Flint",
+    "type": "Cartographer",
+    "rarity": "Uncommon",
+    "quirk": "Draws maps from memory.",
+    "sells": ["Maps", "Navigation tools"]
+  },
+  {
+    "name": "Whiskers & Wings",
+    "owner": "Pippa Nettle",
+    "type": "Pet Shop",
+    "rarity": "Common",
+    "quirk": "Names every animal Steve.",
+    "sells": ["Pets", "Feed"]
+  },
+  {
+    "name": "The Gilded Candle",
+    "owner": "Aurelia Brightwick",
+    "type": "Candle Shop",
+    "rarity": "Common",
+    "quirk": "Never uses artificial light.",
+    "sells": ["Candles", "Incense"]
+  },
+  {
+    "name": "Elowen's Encore",
+    "owner": "Elowen",
+    "type": "Music Shop",
+    "rarity": "Uncommon",
+    "quirk": "No one leaves without hearing music.",
+    "sells": ["Instruments", "Sheet music", "Magical music boxes"]
+  },
+  {
+    "name": "The Dragon Dentist",
+    "owner": "Dr. Molarus",
+    "type": "Clinic",
+    "rarity": "Rare",
+    "quirk": "Has framed dragon teeth everywhere.",
+    "sells": ["Dental services", "Fang polishing"]
+  },
+  {
+    "name": "The Midnight Auction",
+    "owner": "Unknown",
+    "type": "Auction House",
+    "rarity": "Legendary",
+    "quirk": "Only appears after sunset.",
+    "sells": ["Extremely rare items"]
+  }
+]
