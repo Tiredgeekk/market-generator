@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rotating D&D Market</title>
+  <title>D&D Market Generator</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
 
+<body>
   <div class="container">
-    <h1>🏪 Rotating Market Generator</h1>
-    <button onclick="generateMarket()">🎲 Generate Market</button>
+    <h1>🏪 Wandering Market Generator</h1>
+
+    <div class="buttons">
+      <button onclick="generateMarket()">🎲 Generate Market</button>
+      <button onclick="printMarket()">🖨️ Print Market Sheet</button>
+    </div>
 
     <div id="market" class="market"></div>
   </div>
@@ -18,5 +22,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-<button onclick="printMarket()">🖨️ Print Market Sheet</button>
