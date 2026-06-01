@@ -1,3 +1,4 @@
+let currentMarket = [];
 let shops = [];
 
 fetch("shops.json")
