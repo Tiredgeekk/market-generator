@@ -49,14 +49,47 @@ function render(market) {
     const card = document.createElement("div");
     card.className = "card";
 
+    card.onclick = () => openShop(shop);
+
     card.innerHTML = `
       <h3>${shop.name}</h3>
       <div class="rarity">${shop.rarity} • ${shop.type}</div>
       <p><b>Owner:</b> ${shop.owner}</p>
       <p><b>Quirk:</b> ${shop.quirk}</p>
-      <p><b>Sells:</b> ${shop.sells.join(", ")}</p>
     `;
 
     container.appendChild(card);
   });
+}
+
+/* -------------------- SHOP MODAL -------------------- */
+
+function openShop(shop) {
+  const modal = document.createElement("div");
+  modal.className = "modal";
+
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.remove();
+  };
+
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h2>${shop.name}</h2>
+      <p><b>Owner:</b> ${shop.owner}</p>
+      <p><b>Type:</b> ${shop.type}</p>
+      <p><b>Rarity:</b> ${shop.rarity}</p>
+      <p><b>Quirk:</b> ${shop.quirk}</p>
+
+      <hr/>
+
+      <h3>📦 Inventory</h3>
+      <ul>
+        ${shop.sells.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+
+      <button onclick="this.closest('.modal').remove()">Close</button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
 }
