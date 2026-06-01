@@ -151,3 +151,22 @@ function printMarket() {
     win.close();
   };
 }
+function copyMarket() {
+  if (!currentMarket.length) {
+    alert("Generate a market first!");
+    return;
+  }
+
+  const text = currentMarket
+    .map(shop =>
+`SHOP: ${shop.name}
+OWNER: ${shop.owner}
+TYPE: ${shop.type}
+RARITY: ${shop.rarity}`
+    )
+    .join("\n\n--------------------\n\n");
+
+  navigator.clipboard.writeText(text)
+    .then(() => alert("Market copied!"))
+    .catch(() => alert("Copy failed."));
+}
