@@ -128,27 +128,483 @@
     "sells": ["Candles", "Incense"]
   },
   {
-    "name": "Elowen's Encore",
-    "owner": "Elowen",
-    "type": "Music Shop",
-    "rarity": "Uncommon",
-    "quirk": "No one leaves without hearing music.",
-    "sells": ["Instruments", "Sheet music", "Magical music boxes"]
+    "name": "Thread & Thorn",
+    "owner": "Sylvie Briar",
+    "type": "Tailor",
+    "rarity": "Common",
+    "quirk": "Judges people by their cloaks.",
+    "sells": ["Clothing", "Cloaks"]
   },
   {
-    "name": "The Dragon Dentist",
-    "owner": "Dr. Molarus",
-    "type": "Clinic",
+    "name": "Kraken's Cache",
+    "owner": "Captain Barnacle",
+    "type": "Curiosities",
+    "rarity": "Uncommon",
+    "quirk": "Claims everything came from a sea monster.",
+    "sells": ["Maritime oddities"]
+  },
+  {
+    "name": "Arcane Odds & Ends",
+    "owner": "Nix Emberglass",
+    "type": "Magic Shop",
+    "rarity": "Uncommon",
+    "quirk": "Everything is labeled 'probably safe.'",
+    "sells": ["Magic items"]
+  },
+  {
+    "name": "The Velvet Fang",
+    "owner": "Countess Vestra",
+    "type": "Perfumery",
     "rarity": "Rare",
-    "quirk": "Has framed dragon teeth everywhere.",
-    "sells": ["Dental services", "Fang polishing"]
+    "quirk": "Never seen during daylight.",
+    "sells": ["Exotic perfumes"]
+  },
+  {
+    "name": "Clockwork Dreams",
+    "owner": "Wrenchwick",
+    "type": "Clockmaker",
+    "rarity": "Uncommon",
+    "quirk": "Times everything with a stopwatch.",
+    "sells": ["Clocks", "Gadgets"]
+  },
+  {
+    "name": "Goblin Gold Exchange",
+    "owner": "Snaggle",
+    "type": "Currency Exchange",
+    "rarity": "Common",
+    "quirk": "Changes rates hourly.",
+    "sells": ["Coin conversion services"]
+  },
+  {
+    "name": "The Painted Griffin",
+    "owner": "Maribel Finch",
+    "type": "Art Shop",
+    "rarity": "Common",
+    "quirk": "Paints customers while they browse.",
+    "sells": ["Paintings", "Supplies"]
+  },
+  {
+    "name": "Ember & Scale",
+    "owner": "Rhogar Ashclaw",
+    "type": "Leatherworker",
+    "rarity": "Common",
+    "quirk": "Insists dragonhide is overrated.",
+    "sells": ["Bags", "Armor", "Belts"]
   },
   {
     "name": "The Midnight Auction",
     "owner": "Unknown",
     "type": "Auction House",
     "rarity": "Legendary",
-    "quirk": "Only appears after sunset.",
-    "sells": ["Extremely rare items"]
+    "quirk": "Appears only after sunset.",
+    "sells": ["Extremely rare and bizarre items"]
+  },
+  {
+    "name": "Elowen's Encore",
+    "owner": "Elowen",
+    "type": "Music Shop & Performance Venue",
+    "rarity": "Uncommon",
+    "quirk": "No one leaves without hearing music.",
+    "sells": ["Instruments", "Sheet music", "Magical music boxes"]
+  },
+  {
+    "name": "The Mimic Adoption Agency",
+    "owner": "Mrs. Chomper",
+    "type": "Pet Store",
+    "rarity": "Rare",
+    "quirk": "Every chest in the store is alive.",
+    "sells": ["Baby mimics", "Mimic feed", "Anti-biting gloves"]
+  },
+  {
+    "name": "The Dragon Dentist",
+    "owner": "Dr. Molarus",
+    "type": "Dental Clinic",
+    "rarity": "Rare",
+    "quirk": "Has framed dragon teeth covering every wall.",
+    "sells": ["Dental services", "Tooth charms", "Fang polishing"]
+  },
+  {
+    "name": "The Pocket Dimension",
+    "owner": "Vera Foldspace",
+    "type": "Storage Solutions",
+    "rarity": "Uncommon",
+    "quirk": "The shop is larger every time you enter.",
+    "sells": ["Bags of Holding", "Portable storage", "Dimensional luggage"]
+  },
+  {
+    "name": "Soot & Spark",
+    "owner": "Flintwick",
+    "type": "Fireworks Shop",
+    "rarity": "Common",
+    "quirk": "Hair changes color with mood.",
+    "sells": ["Fireworks", "Signal flares", "Spark crystals"]
+  },
+  {
+    "name": "The Laughing Lich",
+    "owner": "Mortimer",
+    "type": "Joke Shop",
+    "rarity": "Rare",
+    "quirk": "Cannot stop laughing at his own jokes.",
+    "sells": ["Prank items", "Gag gifts", "Illusion novelties"]
+  },
+  {
+    "name": "Owlbear Outfitters",
+    "owner": "Bera Stoneshield",
+    "type": "Adventuring Gear",
+    "rarity": "Common",
+    "quirk": "Everything is tested by being thrown at an owlbear.",
+    "sells": ["Rope", "Tents", "Climbing gear", "Survival kits"]
+  },
+  {
+    "name": "The Forgotten Shelf",
+    "owner": "????",
+    "type": "Bookstore",
+    "rarity": "Rare",
+    "quirk": "Nobody remembers the owner's face.",
+    "sells": ["Lost journals", "Forgotten spellbooks", "Historical records"]
+  },
+  {
+    "name": "Moonmilk & Honey",
+    "owner": "Tilda Sweetroot",
+    "type": "Dessert Shop",
+    "rarity": "Common",
+    "quirk": "Gives free samples whether you want them or not.",
+    "sells": ["Pastries", "Honey cakes", "Candied fruits"]
+  },
+  {
+    "name": "The Seventh Sock",
+    "owner": "Nibwick",
+    "type": "Clothing Shop",
+    "rarity": "Uncommon",
+    "quirk": "Specializes exclusively in mismatched socks.",
+    "sells": ["Socks", "Slippers", "Enchanted footwear"]
+  },
+  {
+    "name": "The Raven's Secret",
+    "owner": "Corvin Blackfeather",
+    "type": "Information Broker",
+    "rarity": "Rare",
+    "quirk": "Never speaks directly.",
+    "sells": ["Rumors", "Secrets", "Gossip"]
+  },
+  {
+    "name": "The Sleeping Giant",
+    "owner": "Big Tom",
+    "type": "Furniture Store",
+    "rarity": "Common",
+    "quirk": "Frequently naps in display beds.",
+    "sells": ["Furniture", "Mattresses", "Camping cots"]
+  },
+  {
+    "name": "Scales & Tales",
+    "owner": "Seraphina Coil",
+    "type": "Bookstore",
+    "rarity": "Uncommon",
+    "quirk": "Reviews books as if they are personal friends.",
+    "sells": ["Novels", "Histories", "Children's books"]
+  },
+  {
+    "name": "The Wandering Lantern",
+    "owner": "Old Bram",
+    "type": "Curiosity Shop",
+    "rarity": "Rare",
+    "quirk": "The shop appears in a different place every night.",
+    "sells": ["Relics", "Antiques", "Mysterious artifacts"]
+  },
+  {
+    "name": "Brew & Ballad",
+    "owner": "Melody Hopsong",
+    "type": "Tavern Supply Shop",
+    "rarity": "Common",
+    "quirk": "Sings every transaction.",
+    "sells": ["Brewing ingredients", "Instruments", "Decorations"]
+  },
+  {
+    "name": "The Last Page",
+    "owner": "Peren Dustquill",
+    "type": "Bookstore",
+    "rarity": "Rare",
+    "quirk": "Every book is missing its final page.",
+    "sells": ["Books", "Spellbooks", "Journals"]
+  },
+  {
+    "name": "Paws, Claws & Laws",
+    "owner": "Magistrate Whiskers",
+    "type": "Legal Services",
+    "rarity": "Uncommon",
+    "quirk": "Consultations always start with tea.",
+    "sells": ["Contracts", "Legal advice", "Wills"]
+  },
+  {
+    "name": "The Glass Garden",
+    "owner": "Iris Prismbloom",
+    "type": "Glassblower",
+    "rarity": "Common",
+    "quirk": "Never makes identical pieces.",
+    "sells": ["Stained glass", "Glass flowers", "Crystal sculptures"]
+  },
+  {
+    "name": "The Rusty Crown",
+    "owner": "King Greg",
+    "type": "Pawn Shop",
+    "rarity": "Common",
+    "quirk": "Claims to be royalty.",
+    "sells": ["Used gear", "Treasures", "Heirlooms"]
+  },
+  {
+    "name": "The Bumblebrew",
+    "owner": "Honeydrop",
+    "type": "Cafe",
+    "rarity": "Common",
+    "quirk": "Employs magically enlarged bees.",
+    "sells": ["Coffee", "Tea", "Pastries", "Honey"]
+  },
+  {
+    "name": "Bone & Briar",
+    "owner": "Mother Yew",
+    "type": "Apothecary",
+    "rarity": "Uncommon",
+    "quirk": "Knows customers before meeting them.",
+    "sells": ["Herbs", "Potions", "Rare plants"]
+  },
+  {
+    "name": "The Hero's Discount",
+    "owner": "Vark Stonejaw",
+    "type": "General Store",
+    "rarity": "Common",
+    "quirk": "Discounts depend on storytelling skill.",
+    "sells": ["Supplies", "Food", "Gear"]
+  },
+  {
+    "name": "The Moonlit Menagerie",
+    "owner": "Celeste Starhoof",
+    "type": "Pet Shop",
+    "rarity": "Rare",
+    "quirk": "Animals named after constellations.",
+    "sells": ["Exotic pets", "Feed", "Accessories"]
+  },
+  {
+    "name": "The Gilded Acorn",
+    "owner": "Nutmeg Brambletoe",
+    "type": "Snack Shop",
+    "rarity": "Common",
+    "quirk": "Obsessed with nuts.",
+    "sells": ["Trail mix", "Candied nuts", "Snacks"]
+  },
+  {
+    "name": "Fortune's Folly",
+    "owner": "Madame Roulette",
+    "type": "Fortune Teller",
+    "rarity": "Uncommon",
+    "quirk": "Half predictions are nonsense.",
+    "sells": ["Fortunes", "Readings", "Prophecies"]
+  },
+  {
+    "name": "The Honest Goblin",
+    "owner": "Snik",
+    "type": "Curio Shop",
+    "rarity": "Rare",
+    "quirk": "Cannot lie.",
+    "sells": ["Truthful curios", "Oddities"]
+  },
+  {
+    "name": "The Cloudcatcher",
+    "owner": "Nimbus Reedwalker",
+    "type": "Weather Shop",
+    "rarity": "Rare",
+    "quirk": "Tracks weather obsessively.",
+    "sells": ["Bottled rain", "Wind charms", "Forecasts"]
+  },
+  {
+    "name": "Threads of Fate",
+    "owner": "The Three Sisters",
+    "type": "Tailor",
+    "rarity": "Rare",
+    "quirk": "Measure without touching.",
+    "sells": ["Clothing", "Enchanted garments"]
+  },
+  {
+    "name": "The Polite Necromancer",
+    "owner": "Edgar Graves",
+    "type": "Funeral Services",
+    "rarity": "Uncommon",
+    "quirk": "Extremely apologetic necromancer.",
+    "sells": ["Funeral services", "Gravestones", "Memorials"]
+  },
+  {
+    "name": "Yesterday's News",
+    "owner": "Penny Press",
+    "type": "Newspaper Stand",
+    "rarity": "Rare",
+    "quirk": "Sells past and future news.",
+    "sells": ["Newspapers", "Historical issues", "Future issues"]
+  },
+  {
+    "name": "The Bottomless Barrel",
+    "owner": "Old Finn",
+    "type": "Beverage Shop",
+    "rarity": "Common",
+    "quirk": "Never empties.",
+    "sells": ["Drinks", "Ciders", "Juices"]
+  },
+  {
+    "name": "The Velvet Curtain",
+    "owner": "Vivienne Nightstar",
+    "type": "Costume Shop",
+    "rarity": "Uncommon",
+    "quirk": "Dramatic fashion critic.",
+    "sells": ["Costumes", "Masks", "Props"]
+  },
+  {
+    "name": "The Tiny Dragon",
+    "owner": "Ember",
+    "type": "Jewelry Shop",
+    "rarity": "Rare",
+    "quirk": "Owner is 6 inches tall.",
+    "sells": ["Jewelry", "Trinkets"]
+  },
+  {
+    "name": "The Lantern & Lute",
+    "owner": "Arlen Hearthsong",
+    "type": "Tavern Supply",
+    "rarity": "Common",
+    "quirk": "Collects songs.",
+    "sells": ["Mugs", "Brewing kits", "Instruments"]
+  },
+  {
+    "name": "The Door Store",
+    "owner": "Dorrin Doorsworth",
+    "type": "Door Shop",
+    "rarity": "Uncommon",
+    "quirk": "Passionate about doors.",
+    "sells": ["Doors", "Secret doors", "Reinforced doors"]
+  },
+  {
+    "name": "The Shop Between Blinks",
+    "owner": "Mr. Wink",
+    "type": "Curio Shop",
+    "rarity": "Legendary",
+    "quirk": "Only appears when not observed.",
+    "sells": ["Impossible objects", "Memories", "Pocket dimensions"]
+  },
+  {
+    "name": "The Chicken-Leg Bookmobile",
+    "owner": "Baba Yara",
+    "type": "Traveling Bookstore",
+    "rarity": "Legendary",
+    "quirk": "Walks on giant chicken legs.",
+    "sells": ["Books", "Fairy tales", "Talking books"]
+  },
+  {
+    "name": "The Missing Sock Emporium",
+    "owner": "Lefty",
+    "type": "Clothing Shop",
+    "rarity": "Rare",
+    "quirk": "Only sells single socks.",
+    "sells": ["Socks", "Enchanted socks"]
+  },
+  {
+    "name": "The Second Chance",
+    "owner": "Mercy Vale",
+    "type": "Pawn Shop",
+    "rarity": "Legendary",
+    "quirk": "Buys back regrets.",
+    "sells": ["Lost items", "Heirlooms", "Memories"]
+  },
+  {
+    "name": "The Sleeping Dragon",
+    "owner": "Smolder",
+    "type": "Tea Shop",
+    "rarity": "Legendary",
+    "quirk": "Dragon pretending badly to be human.",
+    "sells": ["Tea", "Pastries", "Dragon goods"]
+  },
+  {
+    "name": "Tomorrow's Treasures",
+    "owner": "Future-Me",
+    "type": "General Store",
+    "rarity": "Legendary",
+    "quirk": "Stocks future items.",
+    "sells": ["Future goods", "Pre-dated items"]
+  },
+  {
+    "name": "The Hero Retirement Center",
+    "owner": "Sir Reginald",
+    "type": "Adventurer Shop",
+    "rarity": "Rare",
+    "quirk": "Gives unsolicited advice.",
+    "sells": ["Gear", "Maps", "Survival guides"]
+  },
+  {
+    "name": "The Department of Extremely Minor Magic",
+    "owner": "Clerk #47",
+    "type": "Magic Shop",
+    "rarity": "Rare",
+    "quirk": "Useless but oddly charming magic items.",
+    "sells": ["Minor magical items"]
+  },
+  {
+    "name": "The Whispering Aquarium",
+    "owner": "Marina Deepwater",
+    "type": "Aquarium",
+    "rarity": "Rare",
+    "quirk": "Fish gossip about customers.",
+    "sells": ["Fish", "Aquatic pets"]
+  },
+  {
+    "name": "The Golden Goose",
+    "owner": "Goose",
+    "type": "Bank",
+    "rarity": "Legendary",
+    "quirk": "Owner is a goose.",
+    "sells": ["Banking services"]
+  },
+  {
+    "name": "The Three Kobolds in a Coat",
+    "owner": "Mr. Tallman",
+    "type": "General Store",
+    "rarity": "Rare",
+    "quirk": "Definitely three kobolds.",
+    "sells": ["General goods"]
+  },
+  {
+    "name": "The Potion of Maybe",
+    "owner": "Fizzlebang",
+    "type": "Potion Shop",
+    "rarity": "Rare",
+    "quirk": "Effects are approximate.",
+    "sells": ["Experimental potions"]
+  },
+  {
+    "name": "The Last Stop",
+    "owner": "Ferryman Grey",
+    "type": "Travel Agency",
+    "rarity": "Legendary",
+    "quirk": "Appears when needed.",
+    "sells": ["Travel routes", "Passage"]
+  },
+  {
+    "name": "The Owlbear Café",
+    "owner": "Muffin",
+    "type": "Cafe",
+    "rarity": "Rare",
+    "quirk": "Owner is an owlbear.",
+    "sells": ["Coffee", "Pastries"]
+  },
+  {
+    "name": "The End of the Market",
+    "owner": "The Caretaker",
+    "type": "Unknown",
+    "rarity": "Mythic",
+    "quirk": "Sells what you want, fear, and imagine.",
+    "sells": ["Unknown goods"]
+  },
+  {
+    "name": "The Bickering Bauble",
+    "owner": "Pip & Lumen",
+    "type": "Trinket Shop",
+    "rarity": "Uncommon",
+    "quirk": "Constantly arguing pixie couple.",
+    "sells": ["Trinkets", "Jewelry", "Oddities"]
   }
 ]
