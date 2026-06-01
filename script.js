@@ -1,24 +1,26 @@
-let currentMarket = [];
 let shops = [];
+let currentMarket = [];
 
+/* LOAD SHOPS */
 fetch("shops.json")
   .then(res => res.json())
   .then(data => {
     shops = data;
-    generateMarket();
   });
 
+/* RARITY WEIGHTS */
 function getWeight(rarity) {
   switch (rarity) {
     case "Common": return 10;
     case "Uncommon": return 6;
     case "Rare": return 3;
     case "Legendary": return 1;
-    case "Mythic": return 0.3;
+    case "Mythic": return 0.5;
     default: return 5;
   }
 }
 
+/* PICK ONE SHOP */
 function weightedPick() {
   const pool = [];
 
@@ -32,6 +34,7 @@ function weightedPick() {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
+/* GENERATE MARKET */
 function generateMarket() {
   const selected = new Set();
 
@@ -40,10 +43,10 @@ function generateMarket() {
   }
 
   currentMarket = [...selected];
-
   render(currentMarket);
 }
 
+/* RENDER */
 function render(market) {
   const container = document.getElementById("market");
   container.innerHTML = "";
@@ -51,22 +54,21 @@ function render(market) {
   market.forEach(shop => {
     const card = document.createElement("div");
     card.className = "card";
-
-    card.onclick = () => openShop(shop);
+    card.dataset.rarity = shop.rarity;
 
     card.innerHTML = `
       <h3>${shop.name}</h3>
-      <div class="rarity">${shop.rarity} • ${shop.type}</div>
-      <p><b>Owner:</b> ${shop.owner}</p>
-      <p><b>Quirk:</b> ${shop.quirk}</p>
+      <p><b>${shop.type}</b></p>
+      <p>${shop.owner}</p>
     `;
+
+    card.onclick = () => openShop(shop);
 
     container.appendChild(card);
   });
 }
 
-/* -------------------- SHOP MODAL -------------------- */
-
+/* SHOP MODAL */
 function openShop(shop) {
   const modal = document.createElement("div");
   modal.className = "modal";
@@ -85,9 +87,9 @@ function openShop(shop) {
 
       <hr/>
 
-      <h3>📦 Inventory</h3>
+      <h3>Inventory</h3>
       <ul>
-        ${shop.sells.map(item => `<li>${item}</li>`).join("")}
+        ${shop.sells.map(i => `<li>${i}</li>`).join("")}
       </ul>
 
       <button onclick="this.closest('.modal').remove()">Close</button>
@@ -96,69 +98,50 @@ function openShop(shop) {
 
   document.body.appendChild(modal);
 }
+
+/* PRINT */
 function printMarket() {
-  if (!currentMarket.length) return;
+  if (!currentMarket.length) {
+    alert("Generate a market first!");
+    return;
+  }
 
-  const printWindow = window.open("", "_blank");
+  const win = window.open("", "_blank");
 
-  printWindow.document.write(`
+  win.document.write(`
     <html>
     <head>
       <title>Market Sheet</title>
       <style>
-        body {
-          font-family: Georgia, serif;
-          padding: 20px;
-        }
-
-        h1 {
-          text-align: center;
-        }
+        body { font-family: Georgia; padding: 20px; }
+        h1 { text-align: center; }
 
         .shop {
           border: 2px solid #333;
-          padding: 12px;
-          margin-bottom: 12px;
+          padding: 10px;
+          margin-bottom: 10px;
           page-break-inside: avoid;
-        }
-
-        .name {
-          font-size: 18px;
-          font-weight: bold;
-        }
-
-        .meta {
-          font-size: 12px;
-          opacity: 0.8;
-        }
-
-        ul {
-          margin: 6px 0 0 20px;
         }
       </style>
     </head>
     <body>
 
-      <h1>🧾 Market Sheet</h1>
+    <h1>🧾 Market Sheet</h1>
 
-      ${currentMarket.map(shop => `
-        <div class="shop">
-          <div class="name">${shop.name}</div>
-          <div class="meta">${shop.rarity} • ${shop.type}</div>
-          <p><b>Owner:</b> ${shop.owner}</p>
-          <p><b>Quirk:</b> ${shop.quirk}</p>
-          <p><b>Sells:</b></p>
-          <ul>
-            ${shop.sells.map(item => `<li>${item}</li>`).join("")}
-          </ul>
-        </div>
-      `).join("")}
+    ${currentMarket.map(s => `
+      <div class="shop">
+        <h3>${s.name}</h3>
+        <p>${s.type} • ${s.rarity}</p>
+        <p><b>Owner:</b> ${s.owner}</p>
+        <p><b>Quirk:</b> ${s.quirk}</p>
+        <p><b>Items:</b> ${s.sells.join(", ")}</p>
+      </div>
+    `).join("")}
 
     </body>
     </html>
   `);
 
-  printWindow.document.close();
-  printWindow.focus();
-  printWindow.print();
+  win.document.close();
+  win.print();
 }
