@@ -96,3 +96,69 @@ function openShop(shop) {
 
   document.body.appendChild(modal);
 }
+function printMarket() {
+  if (!currentMarket.length) return;
+
+  const printWindow = window.open("", "_blank");
+
+  printWindow.document.write(`
+    <html>
+    <head>
+      <title>Market Sheet</title>
+      <style>
+        body {
+          font-family: Georgia, serif;
+          padding: 20px;
+        }
+
+        h1 {
+          text-align: center;
+        }
+
+        .shop {
+          border: 2px solid #333;
+          padding: 12px;
+          margin-bottom: 12px;
+          page-break-inside: avoid;
+        }
+
+        .name {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .meta {
+          font-size: 12px;
+          opacity: 0.8;
+        }
+
+        ul {
+          margin: 6px 0 0 20px;
+        }
+      </style>
+    </head>
+    <body>
+
+      <h1>🧾 Market Sheet</h1>
+
+      ${currentMarket.map(shop => `
+        <div class="shop">
+          <div class="name">${shop.name}</div>
+          <div class="meta">${shop.rarity} • ${shop.type}</div>
+          <p><b>Owner:</b> ${shop.owner}</p>
+          <p><b>Quirk:</b> ${shop.quirk}</p>
+          <p><b>Sells:</b></p>
+          <ul>
+            ${shop.sells.map(item => `<li>${item}</li>`).join("")}
+          </ul>
+        </div>
+      `).join("")}
+
+    </body>
+    </html>
+  `);
+
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+}
