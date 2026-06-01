@@ -1,71 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=EB+Garamond:wght@400;600&display=swap');
+
 body {
-  font-family: "Times New Roman", Times, serif;
-  background: #0f0f14;
-  color: #f5f5f5;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  font-family: "EB Garamond", serif;
+  background: url("https://i.imgur.com/3ZQ3Z9v.jpg"); /* parchment texture vibe */
+  background-size: cover;
+  color: #2b1b10;
+  overflow-x: hidden;
+}
+
+/* subtle floating particles */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: drift 60s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
 }
 
 .container {
   max-width: 1100px;
   margin: auto;
+  padding: 20px;
   text-align: center;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin: 20px;
-  cursor: pointer;
+h1 {
+  font-family: "MedievalSharp", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.2);
 }
 
+/* BUTTON */
+button {
+  background: #5a3b1e;
+  color: #f5e6c8;
+  border: 2px solid #c9a66b;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #6e4926;
+}
+
+/* MARKET GRID */
 .market {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 15px;
+  margin-top: 20px;
 }
 
+/* SHOP CARDS */
 .card {
-  background: #1b1b25;
+  background: rgba(255, 244, 220, 0.85);
+  border-radius: 12px;
   padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #333;
   text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 3px solid transparent;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.card h3 {
-  margin: 0 0 5px;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.rarity {
-  font-size: 12px;
-  opacity: 0.8;
+/* RARITY BORDERS */
+.card[data-rarity="Common"] {
+  border-color: #8c7a5b;
 }
-/* MODAL BACKDROP */
+
+.card[data-rarity="Uncommon"] {
+  border-color: #3cb371;
+  box-shadow: 0 0 10px rgba(60,179,113,0.4);
+}
+
+.card[data-rarity="Rare"] {
+  border-color: #1e90ff;
+  box-shadow: 0 0 12px rgba(30,144,255,0.5);
+}
+
+.card[data-rarity="Legendary"] {
+  border-color: #ffb300;
+  box-shadow: 0 0 15px rgba(255,179,0,0.6);
+  animation: glow 2s infinite alternate;
+}
+
+.card[data-rarity="Mythic"] {
+  border-color: #d14cff;
+  box-shadow: 0 0 20px rgba(209,76,255,0.8);
+  animation: mythicGlow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 8px rgba(255,179,0,0.3); }
+  to { box-shadow: 0 0 20px rgba(255,179,0,0.8); }
+}
+
+@keyframes mythicGlow {
+  from { box-shadow: 0 0 10px rgba(209,76,255,0.4); }
+  to { box-shadow: 0 0 25px rgba(209,76,255,0.9); }
+}
+
+/* MODAL */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
+  inset: 0;
+  background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 0.2s ease;
 }
 
-/* MODAL BOX */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .modal-content {
-  background: #1b1b25;
+  background: #f7ead2;
   padding: 20px;
-  border-radius: 12px;
-  width: 400px;
+  border-radius: 14px;
+  width: 420px;
   max-width: 90%;
-  text-align: left;
-  border: 1px solid #444;
+  border: 3px solid #c9a66b;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  font-family: "EB Garamond", serif;
 }
 
 .modal-content h2 {
+  font-family: "MedievalSharp", cursive;
   margin-top: 0;
 }
 
@@ -73,11 +155,6 @@ button {
   padding-left: 20px;
 }
 
-.card {
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
+.modal-content button {
+  margin-top: 10px;
 }
