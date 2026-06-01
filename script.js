@@ -113,7 +113,7 @@ function printMarket() {
     <head>
       <title>Market Sheet</title>
       <style>
-        body { font-family: Georgia; padding: 20px; }
+        body { font-family: Georgia, serif; padding: 20px; }
         h1 { text-align: center; }
 
         .shop {
@@ -143,5 +143,11 @@ function printMarket() {
   `);
 
   win.document.close();
-  win.print();
+
+  // 🔥 WAIT until the new tab finishes rendering
+  win.onload = () => {
+    win.focus();
+    win.print();
+    win.close();
+  };
 }
