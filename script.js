@@ -39,7 +39,9 @@ function generateMarket() {
     selected.add(weightedPick());
   }
 
-  render([...selected]);
+  currentMarket = [...selected];
+
+  render(currentMarket);
 }
 
 function render(market) {
